@@ -1,0 +1,23 @@
+Restore pre-trained model...
+adversarial training...
+epoch:	0	nll:	8.95992
+epoch:	5	nll:	8.58798
+epoch:	10	nll:	8.31592
+epoch:	15	nll:	7.78421
+epoch:	20	nll:	7.14585
+epoch:	25	nll:	6.75883
+epoch:	30	nll:	6.29694
+epoch:	35	nll:	5.81105
+epoch:	40	nll:	5.65524
+epoch:	45	nll:	5.22994
+epoch:	50	nll:	5.44168
+epoch:	55	nll:	5.72183
+epoch:	60	nll:	5.61696
+epoch:	65	nll:	5.36752
+epoch:	70	nll:	4.93831
+epoch:	75	nll:	4.78157
+epoch:	80	nll:	4.56549
+epoch:	85	nll:	4.97212
+epoch:	90	nll:	5.0093
+epoch:	95	nll:	4.90524
+epoch:	99	nll:	4.78483
