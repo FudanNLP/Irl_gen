@@ -16,7 +16,7 @@ nltk == 3.2.5
 python irl_generation.py
 ```
 
-In experiment, we add weight **x** to entropy term so that it can be used to adjust the balance of 'quality' and 'diversity' of generated texts. The training process of various $\gamma$ is stored in the 'synthetic/save' folder.
+In experiment, we add weight **x** to entropy term so that it can be used to adjust the balance of 'quality' and 'diversity' of generated texts. The training process of various **x** is stored in the 'synthetic/save' folder.
 
 ![fig](fig.png)
 
