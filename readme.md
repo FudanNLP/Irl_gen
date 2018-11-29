@@ -16,16 +16,13 @@ nltk == 3.2.5
 python irl_generation.py
 ```
 
-In experiment, we add weight $\gamma$ to entropy term so that it can be used to adjust the balance of 'quality' and 'diversity' of generated texts. The training process of various $\gamma$ is stored in the 'synthetic/save' folder.
-$$
-\begin{align}
-J_g(\theta) =\mathbb{E}_{\tau \sim q_\theta(\tau)} [R_\phi(\tau)]+ \gamma H(q_\theta(\tau))
-\end{align}
-$$
+In experiment, we add weight **x** to entropy term so that it can be used to adjust the balance of 'quality' and 'diversity' of generated texts. The training process of various $\gamma$ is stored in the 'synthetic/save' folder.
 
-| $\gamma$ | 0.0   | 0.02  | 0.04  | 0.06 | 0.08 | 0.085 |
-| :------- | ----- | ----- | ----- | ---- | ---- | ----- |
-| Result   | 0.916 | 0.918 | 0.914 | 2.89 | 3.46 | 6.91  |
+![fig](fig.png)
+
+| x      | 0.0   | 0.02  | 0.04  | 0.06 | 0.08 | 0.085 |
+| :----- | ----- | ----- | ----- | ---- | ---- | ----- |
+| Result | 0.916 | 0.918 | 0.914 | 2.89 | 3.46 | 6.91  |
 
 | 0.09 | 0.095 | 0.1  | 0.11 | 0.12 | 0.14 | 0.16 |
 | ---- | ----- | ---- | ---- | ---- | ---- | ---- |
@@ -43,7 +40,7 @@ python irl_coco.py
 
 The results are under 50 epochs pretrain and 50 epochs irl training. Smooth function is not used in calucating BLEU(Same with LeakGAN github repo).
 
-| $\gamma$  | 0.35  | 0.45  | 0.55  | 0.65  | 0.75  |
+| x         | 0.35  | 0.45  | 0.55  | 0.65  | 0.75  |
 | --------- | ----- | ----- | ----- | ----- | ----- |
 | BLEU-2(f) | 0.924 | 0.889 | 0.901 | 0.830 | 0.827 |
 | BLEU-3(f) | 0.851 | 0.789 | 0.800 | 0.671 | 0.647 |
@@ -54,9 +51,9 @@ The results are under 50 epochs pretrain and 50 epochs irl training. Smooth func
 | BLEU-4(b) | 0.614 | 0.657 | 0.632 | 0.667 | 0.652 |
 | BLEU-5(b) | 0.590 | 0.627 | 0.605 | 0.618 | 0.606 |
 
-we also tested with BLEU and Self-BLEU (see TexyGen for details) results are listed here, use same smooth function in TexyGen github repo:
+we also tested with BLEU and Self-BLEU (see TexyGen for details) results are listed here, use same smooth function calculating BLEU in TexyGen github repo:
 
-| $\gamma$    | 0.35  | 0.45  | 0.55  | 0.65  | 0.75  |
+| x           | 0.35  | 0.45  | 0.55  | 0.65  | 0.75  |
 | ----------- | ----- | ----- | ----- | ----- | ----- |
 | BLEU-2      | 0.922 | 0.887 | 0.906 | 0.828 | 0.824 |
 | BLEU-3      | 0.844 | 0.780 | 0.802 | 0.653 | 0.627 |
@@ -69,7 +66,7 @@ we also tested with BLEU and Self-BLEU (see TexyGen for details) results are lis
 
 Examples of each weight are listed in imagecoco/speech.
 
-Many thanks to SeqGAN and LeakGAN authors, part of my code are modified from their codes.
+Many thanks to SeqGAN and LeakGAN authors, part of my codes are modified from their codes.
 
 
 
